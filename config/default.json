@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port": 3030,
+  "port": "PORT",
   "public": "../public/",
   "paginate": {
     "default": 10,
@@ -10,10 +10,7 @@
     "entity": "user",
     "service": "users",
     "secret": "d/eCJ2dLFuCHhUv0c1HmJv9bhN4=",
-    "authStrategies": [
-      "jwt",
-      "local"
-    ],
+    "authStrategies": ["jwt", "local"],
     "jwtOptions": {
       "header": {
         "typ": "access"
@@ -30,6 +27,6 @@
   },
   "postgres": {
     "client": "pg",
-    "connection": "postgres://postgres:supersecret@localhost:5432/feathers-poc"
+    "connection": "DB_URL"
   }
 }
