@@ -1,45 +1,12 @@
-# feathers-poc
+# Getting Started with this project
 
-> 
+## Local DB setup
 
-## About
+We're going to be using PostgreSQL for the project so you will want to get that set up locally on your machine.
+To get it set up, click on this [link](https://www.postgresqltutorial.com/install-postgresql/). This will take you to the install site for Windows. If your computer has a different OS, there are links on that page to take you to the appropriate place.
 
-This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+Follow the steps of the wizard. Use port `5432` when asked, and don't worry about installing the Stack Builder stuff.
 
-## Getting Started
+This wizard will setup a user under the account name `postgres`. When you are asked to give a password, be sure to give it `supersecret`. This is just going to be the password for your local development
 
-Getting up and running is as easy as 1, 2, 3.
-
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
-
-    ```
-    cd path/to/feathers-poc
-    npm install
-    ```
-
-3. Start your app
-
-    ```
-    npm start
-    ```
-
-## Testing
-
-Simply run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
-
-Feathers has a powerful command line interface. Here are a few things it can do:
-
-```
-$ npm install -g @feathersjs/cli          # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+`ALTER ROLE username PASSWORD 'newpassword'`
