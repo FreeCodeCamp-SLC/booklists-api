@@ -50,6 +50,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "feathers-objection": "^7.1.0",
+    "feathers-swagger": "^1.2.1",
     "helmet": "^4.4.1",
     "knex": "^0.21.17",
     "objection": "^2.2.14",
