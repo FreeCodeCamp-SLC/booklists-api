@@ -1,5 +1,7 @@
 # Getting Started with this project
 
+### Mac user setup tutorial video 
+
 After cloning/forking this repo, run the `npm install` command
 
 ## Local DB setup
