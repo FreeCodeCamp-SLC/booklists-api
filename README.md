@@ -11,10 +11,10 @@ Follow the steps of the wizard. Use port `5432` when asked, and don't worry abou
 
 This wizard will setup a user under the account name `postgres`. When you are asked to give a password, be sure to remember what you set it as.
 
-# Mac Users
+### Mac Users
 
 
-# Windows Users
+### Windows Users
 You'll need to install a DB viewer. I recommend pgAdmin just to be consistent with others on the project. You can download it here: https://www.pgadmin.org/download/
 
 Once you have that downloaded and opened, right click the `Databases` dropdown in the left panel and select 'Create' and then 'Database'. Name the database `fcc-reading-db`.
