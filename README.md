@@ -1,6 +1,6 @@
 # Getting Started with this project
 
-### Mac user setup tutorial video 
+Tutorial: [Mac user setup tutorial video](https://drive.google.com/file/d/13_1VKOrwtJxzl57pWGivcb0OEL8B5tt6/view?usp=sharing) 
 
 After cloning/forking this repo, run the `npm install` command
 
