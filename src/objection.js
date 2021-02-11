@@ -3,7 +3,7 @@ const knex = require('knex');
 
 module.exports = function (app) {
   const { client, connection } = app.get('postgres');
-  connection.ssl = true
+  connection.sslmode = 'require'
   const db = knex({ client, connection, useNullAsDefault: false });
 
   Model.knex(db);
