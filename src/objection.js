@@ -4,7 +4,7 @@ const knex = require('knex');
 module.exports = function (app) {
   let { client, connection } = app.get('postgres');
   if(process.env.NODE_ENV === 'production') {
-    connection += '?ssl=true'
+    connection += '?ssl=true&rejectUnauthorized=false'
   }
   console.log('CLIENT', client)
   console.log('CONNNECTION', connection)
