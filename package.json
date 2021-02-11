@@ -8,6 +8,11 @@
   "keywords": [
     "feathers"
   ],
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ]
+  },
   "author": {
     "name": "Brian",
     "email": "briancbarrow@gmail.com"
