@@ -6,9 +6,6 @@ module.exports = function (app) {
   if(process.env.NODE_ENV === 'production') {
     connection = { connectionString: process.env.DB_URL, ssl: { rejectUnauthorized: false } }
   }
-  
-  console.log('CLIENT', client)
-  console.log('CONNNECTION', connection)
   const db = knex({ client, connection, useNullAsDefault: false });
 
   Model.knex(db);
