@@ -2,8 +2,10 @@ const { Model } = require('objection');
 const knex = require('knex');
 
 module.exports = function (app) {
-  const { client, connection } = app.get('postgres');
-  connection.sslmode = 'require'
+  let { client, connection } = app.get('postgres');
+  if(process.env.NODE_ENV === 'production') {
+    connection += '?ssl=true'
+  }
   console.log('CLIENT', client)
   console.log('CONNNECTION', connection)
   const db = knex({ client, connection, useNullAsDefault: false });
