@@ -1,6 +1,7 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
 
 const sanitizeListCreate = require('../../hooks/sanitize-list-create');
+const checkId = require('../../hooks/check-id');
 
 module.exports = {
   before: {
@@ -8,8 +9,8 @@ module.exports = {
     find: [],
     get: [],
     create: [sanitizeListCreate()],
-    update: [],
-    patch: [],
+    update: [checkId()],
+    patch: [checkId()],
     remove: [],
   },
 
