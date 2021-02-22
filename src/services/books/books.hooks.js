@@ -1,6 +1,5 @@
 const { authenticate } = require('@feathersjs/authentication').hooks
 
-const sanitizeListCreate = require('../../hooks/sanitize-list-create');
 const checkId = require('../../hooks/check-id');
 
 module.exports = {
@@ -8,10 +7,10 @@ module.exports = {
     all: [authenticate('jwt')],
     find: [],
     get: [],
-    create: [sanitizeListCreate()],
+    create: [],
     update: [checkId()],
     patch: [checkId()],
-    remove: [],
+    remove: []
   },
 
   after: {
@@ -21,7 +20,7 @@ module.exports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
+    remove: []
   },
 
   error: {
@@ -31,6 +30,6 @@ module.exports = {
     create: [],
     update: [],
     patch: [],
-    remove: [],
-  },
-}
+    remove: []
+  }
+};
