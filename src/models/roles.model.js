@@ -39,11 +39,15 @@ module.exports = function (app) {
         table.timestamp('createdAt');
         table.timestamp('updatedAt');
       })
+        .then(() => db('roles').insert([
+          { role: 'user' },
+          {role: 'admin'}
+        ]))
         .then(() => console.log('Created roles table')) // eslint-disable-line no-console
         .catch(e => console.error('Error creating roles table', e)); // eslint-disable-line no-console
     }
   })
     .catch(e => console.error('Error creating roles table', e)); // eslint-disable-line no-console
-
+  
   return Roles;
 };
