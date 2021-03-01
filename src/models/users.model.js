@@ -10,11 +10,12 @@ class Users extends Model {
   static get jsonSchema() {
     return {
       type: 'object',
-      required: ['email', 'password'],
+      required: ['email', 'password', 'roleId'],
 
       properties: {
         email: { type: ['string', 'null'] },
         password: 'string',
+        roleId: {type: 'integer'}
       },
     }
   }
@@ -38,10 +39,10 @@ module.exports = function (app) {
         db.schema
           .createTable('users', (table) => {
             table.increments('id')
-
             table.string('email').unique()
             table.string('password')
-
+            table.integer('roleId')
+            table.foreign('roleId').references('roles.id')
             table.timestamp('createdAt')
             table.timestamp('updatedAt')
           })
