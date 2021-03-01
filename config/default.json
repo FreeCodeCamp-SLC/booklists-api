@@ -27,6 +27,9 @@
   },
   "postgres": {
     "client": "pg",
-    "connection": "DB_URL"
+    "connection": "DB_URL",
+    "migrations": {
+      "tableName": "knex_migrations"
+    }
   }
 }
